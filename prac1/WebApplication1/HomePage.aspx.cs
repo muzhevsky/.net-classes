@@ -13,8 +13,6 @@ namespace WebApplication1
         protected void Page_Load(object sender, EventArgs e)
         {
             database.Add("admin", "admin");
-            database.Add("user", "123");
-            database.Add("asd", "qwe");
         }
 
         protected void Button1_Click(object sender, EventArgs e)

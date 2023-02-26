@@ -42,15 +42,6 @@ namespace prac2
         protected global::System.Web.UI.WebControls.TextBox LoginTextBox;
 
         /// <summary>
-        /// InvalidLoginLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label InvalidLoginLabel;
-
-        /// <summary>
         /// PasswordLabel control.
         /// </summary>
         /// <remarks>
@@ -67,15 +58,6 @@ namespace prac2
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox PasswordTextBox;
-
-        /// <summary>
-        /// InvalidPasswordLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label InvalidPasswordLabel;
 
         /// <summary>
         /// ConfirmPasswordLabel control.
@@ -96,15 +78,6 @@ namespace prac2
         protected global::System.Web.UI.WebControls.TextBox ConfirmPasswordTextBox;
 
         /// <summary>
-        /// InvalidConfirmPasswordLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label InvalidConfirmPasswordLabel;
-
-        /// <summary>
         /// EmailLabel control.
         /// </summary>
         /// <remarks>
@@ -123,15 +96,6 @@ namespace prac2
         protected global::System.Web.UI.WebControls.TextBox EmailTextBox;
 
         /// <summary>
-        /// InvalidEmailLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label InvalidEmailLabel;
-
-        /// <summary>
         /// AgeLabel control.
         /// </summary>
         /// <remarks>
@@ -148,15 +112,6 @@ namespace prac2
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox AgeTextBox;
-
-        /// <summary>
-        /// InvalidAgeLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label InvalidAgeLabel;
 
         /// <summary>
         /// Submit control.
