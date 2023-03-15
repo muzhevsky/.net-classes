@@ -16,6 +16,18 @@
             <asp:Button runat="server" Width="170px" Text="Result" ID="Button_Result" OnClick="ResultButton_Click"></asp:Button>
             <br />
             <asp:Label runat="server" ID="ResultLabel"></asp:Label>
+            <br />
+            <br />
+            <br />
+            <br />
+            <asp:GridView ID="CustomersGridView" runat="server">
+            <Columns>
+                <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
+                <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+                <asp:BoundField DataField="Surname" HeaderText="Surname" SortExpression="Surname" />
+                <asp:BoundField DataField="Year" HeaderText="Year" SortExpression="Year" />
+            </Columns>
+        </asp:GridView>
         </div>
     </form>
 </body>

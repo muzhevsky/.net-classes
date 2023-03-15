@@ -32,7 +32,6 @@ namespace WebApplication1
         protected void BackspaceButton_Click(object sender, EventArgs e)
         {
             if (Calculator_TB.Text.Length < 0) return;
-
             Calculator_TB.Text = Calculator_TB.Text.Substring(0, Calculator_TB.Text.Length - 1);
         }
     }

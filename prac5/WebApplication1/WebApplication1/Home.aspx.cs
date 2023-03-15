@@ -11,12 +11,16 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            var service = new MyService.ServiceSoapClient();
+            CustomersGridView.DataSource = service.GetCustomers();
+            CustomersGridView.DataBind(); 
         }
 
         protected void ResultButton_Click(object sender, EventArgs e)
         {
             ResultLabel.Text = Calculator.Result.ToString();
         }
+
+
     }
 }
