@@ -79,7 +79,6 @@
     <Content Include="Home.aspx" />
     <Content Include="Web.config" />
     <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculator.ascx.cs">
@@ -107,6 +106,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

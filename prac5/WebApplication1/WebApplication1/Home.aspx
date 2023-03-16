@@ -22,10 +22,10 @@
             <br />
             <asp:GridView ID="CustomersGridView" runat="server">
             <Columns>
-                <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
-                <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
-                <asp:BoundField DataField="Surname" HeaderText="Surname" SortExpression="Surname" />
-                <asp:BoundField DataField="Year" HeaderText="Year" SortExpression="Year" />
+                <asp:BoundField DataField="id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
+                <asp:BoundField DataField="name" HeaderText="Name" SortExpression="Name" />
+                <asp:BoundField DataField="surname" HeaderText="Surname" SortExpression="Surname" />
+                <asp:BoundField DataField="year_of_birth" HeaderText="Year" SortExpression="Year" />
             </Columns>
         </asp:GridView>
         </div>

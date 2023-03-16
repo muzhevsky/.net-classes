@@ -21,7 +21,7 @@
         <asp:TextBox runat="server" ID="EmailTextBox"></asp:TextBox><asp:RequiredFieldValidator runat="server" ErrorMessage="Email is empty" ControlToValidate="EmailTextBox"></asp:RequiredFieldValidator><asp:RegularExpressionValidator runat="server" ErrorMessage="Invalid email" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="EmailTextBox"></asp:RegularExpressionValidator><br />
 
         <asp:Label runat="server" Text="Age" ID="AgeLabel"></asp:Label><br />
-        <asp:TextBox runat="server" ID="AgeTextBox"></asp:TextBox><asp:RequiredFieldValidator runat="server" ErrorMessage="Age is empty" ControlToValidate="AgeTextBox"></asp:RequiredFieldValidator><asp:RangeValidator runat="server" ErrorMessage="Invalid age" MinimumValue="18" ControlToValidate="AgeTextBox" MaximumValue="65"></asp:RangeValidator><br />
+        <asp:TextBox runat="server" ID="AgeTextBox"></asp:TextBox><asp:RequiredFieldValidator runat="server" ErrorMessage="Age is empty" ControlToValidate="AgeTextBox"></asp:RequiredFieldValidator><asp:RangeValidator runat="server" ErrorMessage="Invalid age" MinimumValue="18" ControlToValidate="AgeTextBox" MaximumValue="65" Type="Integer"></asp:RangeValidator><br />
 
         <asp:Button runat="server" Text="Sign Up" ID="Submit" OnClick="OnSubmitButtonPress"></asp:Button>
     </form>

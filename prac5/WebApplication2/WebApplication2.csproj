@@ -65,6 +65,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AppData\test.mdf" />
+    <Content Include="AppData\test_log.ldf">
+      <DependentUpon>test.mdf</DependentUpon>
+    </Content>
     <Content Include="Service.asmx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -84,6 +88,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

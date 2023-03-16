@@ -20,7 +20,5 @@ namespace WebApplication1
         {
             ResultLabel.Text = Calculator.Result.ToString();
         }
-
-
     }
 }
