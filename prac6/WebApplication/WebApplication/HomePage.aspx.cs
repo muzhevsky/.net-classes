@@ -9,6 +9,8 @@ namespace WebApplication
 {
     public partial class HomePage : System.Web.UI.Page
     {
+        private static DateTime _lastCacheUpdate;
+        private const int _refreshInterval = 5;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -28,16 +30,18 @@ namespace WebApplication
         protected void GetDataButton_Click(object sender, EventArgs e)
         {
             var source = Cache["Customers"];
-            if (source != null)
+            if (source != null && DateTime.Now.Subtract(_lastCacheUpdate).Seconds < _refreshInterval)
             {
                 GridView.DataSource = source;
                 GridView.DataBind();
                 return;
             }
+
             var service = new MyServiceReference.ServiceSoapClient();
             GridView.DataSource = service.GetCustomers();
             GridView.DataBind();
             Cache["Customers"] = GridView.DataSource;
+            _lastCacheUpdate = DateTime.Now;
         }
     }
 }
