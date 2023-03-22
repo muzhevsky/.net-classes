@@ -12,11 +12,12 @@
     <form id="form1" runat="server">
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                <asp:Label runat="server" Text="Мастер по умолчанию"></asp:Label>
+                <asp:Label runat="server" Text="Плейсхолдер первый (мастер)"></asp:Label>
             </asp:ContentPlaceHolder>
             <br />
             <br />
             <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                <asp:Label runat="server" Text="Плейсхолдер второй (мастер)"></asp:Label>
             </asp:ContentPlaceHolder>
         </div>
     </form>

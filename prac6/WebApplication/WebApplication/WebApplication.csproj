@@ -75,6 +75,7 @@
     </None>
     <Content Include="ErrorPage.aspx" />
     <Content Include="ExtendedPage1.aspx" />
+    <Content Include="ExtendedPage2.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -97,6 +98,13 @@
     </Compile>
     <Compile Include="ExtendedPage1.aspx.designer.cs">
       <DependentUpon>ExtendedPage1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedPage2.aspx.cs">
+      <DependentUpon>ExtendedPage2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtendedPage2.aspx.designer.cs">
+      <DependentUpon>ExtendedPage2.aspx</DependentUpon>
     </Compile>
     <Compile Include="HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
