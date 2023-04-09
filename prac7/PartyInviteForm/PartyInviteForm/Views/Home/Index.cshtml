@@ -1,0 +1,34 @@
+﻿@model PartyInviteForm.Models.PartyFormModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center">
+        <div>
+            <h1>@ViewBag.Welcome</h1>
+            <h2>Страница новогодней вечеринки</h2>
+            <br />
+            <div style="font-size: 24px; border: dotted black 2px; border-radius:10px; text-align:center;">
+                @Html.ActionLink("Заполним?", "../Form/Form")
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
