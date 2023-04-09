@@ -1,4 +1,5 @@
 ﻿using PartyInviteForm.Models;
+using PartyInviteForm.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,12 +17,15 @@ namespace PartyInviteForm.Controllers
         }
 
         [HttpPost]
-        public ViewResult Form(PartyFormModel guest)
+        public ViewResult Form(ParticipantModel model)
         {
-            if (ModelState.IsValid)
-                return View("../Result/Result", guest);
+            if (!ModelState.IsValid)
+                return Form();
 
-            return Form();
+            var listModel = new ParticipantListModel();
+            listModel.AddParticipant(model);
+
+            return View("Result", model);
         }
     }
 }

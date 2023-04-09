@@ -1,4 +1,4 @@
-﻿@model PartyInviteForm.Models.PartyFormModel
+﻿@model PartyInviteForm.Models.ParticipantModel
 
 @{
     Layout = null;
@@ -26,6 +26,9 @@
             <br />
             <div style="font-size: 24px; border: dotted black 2px; border-radius:10px; text-align:center;">
                 @Html.ActionLink("Заполним?", "../Form/Form")
+            </div>
+            <div style="font-size: 24px; border: dotted black 2px; border-radius:10px; text-align:center;">
+                @Html.ActionLink("Другие участники", "../Admin/Admin")
             </div>
         </div>
     </div>

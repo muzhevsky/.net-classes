@@ -1,0 +1,52 @@
+﻿@model PartyInviteForm.Models.ParticipantModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Form</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Форма</h1>
+    <div>
+        @using (Html.BeginForm("Form", "Form", FormMethod.Post))
+        {
+            @Html.ValidationSummary()
+            <div class="form-group">
+                <label>Имя:</label>
+                @Html.TextBoxFor(model => model.Name, new { })
+            </div>
+            <div class="form-group">
+                <label>Email:</label>
+                @Html.TextBoxFor(model => model.Email, new { })
+            </div>
+            <div class="form-group">
+                <label>Телефон:</label>
+                @Html.TextBoxFor(model => model.PhoneNumber, new { })
+            </div>
+            <div class="form-group">
+                <label>Придете?</label>
+                @Html.DropDownListFor(model => model.Attention, new[] {
+                    new SelectListItem() { Text = "Приду", Value = Boolean.TrueString},
+                    new SelectListItem() { Text = "Не приду", Value = Boolean.FalseString}
+                }, "Выберите опцию", new { })
+            </div>
+            <div class="text-center">
+                <input type="submit" value="Подтвердить"/>
+            </div>
+        }
+    </div>
+</body>
+</html>
