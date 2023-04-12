@@ -17,10 +17,10 @@ namespace PartyInviteForm.Models
         [RegularExpression(".+\\@.+\\..+", ErrorMessage = "Некорректный email")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Некорректный телефон, мы принимаем только Xiaomi")]
+        [Required(ErrorMessage = "Некорректный телефон")]
         public string PhoneNumber { get; set; }
 
-        [Required(ErrorMessage = "Придете?")]
+        [Required(ErrorMessage = "Выберите опцию")]
         public bool? Attention { get; set; }
 
     }

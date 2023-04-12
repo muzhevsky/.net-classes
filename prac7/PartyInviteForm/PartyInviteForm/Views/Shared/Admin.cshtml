@@ -16,20 +16,31 @@
             flex-direction: column;
             align-items: center;
         }
+
+        p span {
+            margin-right: 5px;
+        }
+
+        p {
+            display: flex;
+            flex-direction: column;
+        }
     </style>
 </head>
 <body>
     @{var content = "";
-        var empty = "Участников пока нет";
-        foreach (var item in Model.GetParticipants())
+        var participants = Model.GetParticipants();
+        var empty = participants.Count < 1 ? "Участников пока нет" : "";
+        for (var i = 0; i < participants.Count; i++)
         {
-            content += "<tr>";
-            content += $"<th>{item.Id}</th>";
-            content += $"<th>{item.Name}</th>";
-            content += $"<th>{item.PhoneNumber}</th>";
-            content += $"<th>{item.Email}</th>";
-            content += $"<th>{item.Attention}</th>";
-            content += "</tr>";
+            var item = participants[i];
+            content += $"<p>{i + 1}) ";
+            content += $"<span>имя: {item.Name}</span>";
+            content += $"<span>номер телефона: {item.PhoneNumber}</span>";
+            content += $"<span>email: {item.Email}</span>";
+            content += $"<span>придёт ли:  {item.Attention}</span>";
+            content += "</p>";
+
         }
     }
 
