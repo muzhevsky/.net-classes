@@ -11,7 +11,7 @@ namespace PartyInviteForm.Models
 {
     public class ParticipantListModel
     {
-        string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"F:\\Education\\SSTU\\Информационные технологии\\.net-classes\\prac7\\PartyInviteForm\\PartyInviteForm\\App_Data\\participants.mdf\";Integrated Security=True;Connect Timeout=30";
+        string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"E:\\Projects\\SSTU\\Information technologies\\.net-classes\\prac7\\PartyInviteForm\\PartyInviteForm\\App_Data\\participants.mdf\";Integrated Security=True;Connect Timeout=30";
         SqlConnection _sqlConnection;
 
         public List<ParticipantModel> GetParticipants()

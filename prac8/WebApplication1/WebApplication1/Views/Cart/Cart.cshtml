@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Application.ValueObjects.OrderItemDetails>
+
+@{
+    ViewBag.Title = "Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Cart</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Goods.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Goods.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Goods.Price)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        var price = item.Goods != null ? item.Goods.Price * item.Quantity : 0;
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Goods.Name);
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Goods.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => price)
+            </td>
+            <td>
+                @Html.ActionLink("+", "AddToCart", new { controller = "Cart", controllerName = "Cart", actionName = "Cart", goodsId = item.Goods.Id }) /
+                @Html.ActionLink("-", "RemoveOneFromCart", new { controller = "Cart", controllerName = "Cart", actionName = "Cart", goodsId = item.Goods.Id })
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "RemoveAllFromCart", new { goodsId = item.Goods.Id, controller = "Cart", actionName = "Cart" })
+            </td>
+        </tr>
+    }
+
+</table>
+
+@if (Model.Count() > 0)
+{
+    <button>
+        @Html.ActionLink("Создать заказ", "ProceedOrder", "Cart", new { }, null);
+    </button>
+}

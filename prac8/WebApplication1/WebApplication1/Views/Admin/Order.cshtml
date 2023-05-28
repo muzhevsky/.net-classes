@@ -1,0 +1,57 @@
+﻿@model Application.ValueObjects.OrderItems
+
+@{
+    ViewBag.Title = "Order";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Order @Model.Id</h2>
+
+<div>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => Model.Details[0].Goods.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => Model.Details[0].Goods.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => Model.Details[0].Goods.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => Model.Details[0].Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => Model.Details[0].Goods.Price)
+            </th>
+            <th>
+                Full price
+            </th>
+        </tr>
+        @for(var i = 0; i < Model.Details.Count; i++)
+        {
+            var value = Model.Details[i].Quantity * Model.Details[i].Goods.Price;
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.Details[i].Goods.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.Details[i].Goods.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.Details[i].Goods.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.Details[i].Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.Details[i].Goods.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => value)
+                </td>
+            </tr>
+        }
+    </table>
+</div>

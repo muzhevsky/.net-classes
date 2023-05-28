@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="~/Content/Site.css" />
+</head>
+<body>
+    <div class="header">
+        <div class="container col-8 header-inner">
+            <div class="header-option">@Html.ActionLink("Goods", "Goods", "Goods")</div>
+            <div class="header-option">@Html.ActionLink("Cart", "Cart", "Cart")</div>
+            <div class="header-option">@Html.ActionLink("Staff only", "Admin", "Admin")</div>
+        </div>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

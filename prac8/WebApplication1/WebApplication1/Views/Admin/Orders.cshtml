@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Application.ValueObjects.OrderData>
+@{
+    ViewBag.Title = "Orders";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Orders</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(modelItem => modelItem.Order.Id)
+        </th>
+        <th>
+            CustomerId
+        </th>
+        <th>
+            @Html.DisplayNameFor(modelItem => modelItem.Customer.Surname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(modelItem => modelItem.Customer.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(modelItem => modelItem.Customer.Patronymic)
+        </th>
+        <th>
+            @Html.DisplayNameFor(modelItem => modelItem.Customer.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(modelItem => modelItem.Customer.PhoneNumber)
+        </th>
+        <th>
+            Состав заказа
+        </th>
+    </tr>
+
+@foreach (var model in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => model.Order.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => model.Customer.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => model.Customer.Surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => model.Customer.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => model.Customer.Patronymic)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => model.Customer.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => model.Customer.PhoneNumber)
+        </td>
+        <td>
+            @Html.ActionLink("Состав заказа", "OrderDetails", "Admin", new { orderId = model.Order.Id }, null)
+        </td>
+    </tr>
+}
+
+</table>

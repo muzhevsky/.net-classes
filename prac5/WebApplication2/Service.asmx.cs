@@ -19,7 +19,7 @@ namespace WebApplication1
     // [System.Web.Script.Services.ScriptService]
     public class Service : System.Web.Services.WebService
     {
-        const string ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"F:\\Education\\SSTU\\Информационные технологии\\.net-classes\\prac4\\service\\service\\App_Data\\test.mdf\";Integrated Security=True;Connect Timeout=30";
+        const string ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"E:\\Projects\\SSTU\\Information technologies\\.net-classes\\prac5\\WebApplication2\\AppData\\test.mdf\";Integrated Security=True;Connect Timeout=30";
 
         [WebMethod]
         public DataSet GetCustomers()
